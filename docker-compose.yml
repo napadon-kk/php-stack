@@ -1,0 +1,16 @@
+services:
+  web:
+    image: napadon/php-stack:php8.4-alpine-v1-stable
+    build:
+      context: .
+      dockerfile: .docker/web/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/draft:/var/www/html
+    networks:
+      - laravel
+
+networks:
+  laravel:
+    driver: bridge
