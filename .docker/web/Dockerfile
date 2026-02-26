@@ -26,7 +26,9 @@ COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr
 RUN install-php-extensions \
     gd \
     intl \
+    mysqli \
     pdo_mysql \
+    pgsql \
     pdo_pgsql \
     zip \
     bcmath \
@@ -35,7 +37,11 @@ RUN install-php-extensions \
     exif \
     imagick \
     sqlsrv \
-    pdo_sqlsrv
+    pdo_sqlsrv \
+    soap \
+    sodium \
+    mbstring \
+    xml
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
