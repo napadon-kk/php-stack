@@ -1,6 +1,6 @@
 services:
   web:
-    image: napadon/php-stack:php8.4-alpine-v1-stable
+    image: napadon/php-stack:php7.4-alpine-v1-stable
     build:
       context: .
       dockerfile: .docker/web/Dockerfile
