@@ -41,7 +41,8 @@ RUN install-php-extensions \
     soap \
     sodium \
     mbstring \
-    xml
+    xml \
+    redis
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
